@@ -1,14 +1,13 @@
 from django.db import models
 
 # Create your models here.
-class Curso(models.Model):
-    nombre = models.CharField(max_length=25, default="Python")  #indicar tipo de dato y cantidad de caracteres en este caso. Default es lo que aparece si no le completamos nada.
-    camada = models.IntegerField()
 
 class Articulo(models.Model):
     titulo = models.CharField(max_length=40)
     subtitulo = models.CharField(max_length=300)
     contenido =models.CharField(max_length=2000)
+    def __str__(self):
+        return f"Titulo = {self.titulo} - Subtitulo = {self.subtitulo}"
 
 class Autor(models.Model):
     nombre = models.CharField(max_length=40)
