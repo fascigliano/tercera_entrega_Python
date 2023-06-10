@@ -25,4 +25,6 @@ path("Nosotros", views.Nosotros, name="Nosotros"),
 path('Inicia_Sesion/', views.IniciaSesion, name="Inicia_Sesion"),
 path('Crear_Cuenta/', views.CrearCuenta, name="Crear_Cuenta"),
 path('Articulos/', views.Articulos, name="Articulos"),
+path('Escribir/', views.Escribir, name="Escribir"),
+path('Ser_Escritor/', views.Ser_Escritor, name="Ser_Escritor"),
 ]

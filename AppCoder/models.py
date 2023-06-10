@@ -14,7 +14,7 @@ class Autor(models.Model):
     apellido =models.CharField(max_length=20)
     usuario = models.CharField(max_length=30)
     contraseña =models.CharField(max_length=30)
-    profesion = models.CharField(max_length=30, default="Periodista")
+    profesion = models.CharField(max_length=40)
 class Usuario(models.Model):
     nombre = models.CharField(max_length=40)
     apellido =models.CharField(max_length=20)

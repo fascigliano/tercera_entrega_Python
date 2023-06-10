@@ -1,0 +1,27 @@
+{% extends "padre.html" %}
+{% load static %}
+Crear Cuenta
+{% block title %}
+{% endblock title %}
+    
+
+{% block body %}
+
+<header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h3 class="mx-auto my-0 text-uppercase">Escribe tu Articulo</h3>
+    
+                <form method="post">{% csrf_token %}
+                    <p>Titulo: <input type="text" name="titulo"></p>
+                    <p>Subtitulo: <input type="text" name="subtitulo"></p>
+                    <p>Articulo: <input type="text" name="articulo"></p>
+                   <input type="submit" value="enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% endblock body %}

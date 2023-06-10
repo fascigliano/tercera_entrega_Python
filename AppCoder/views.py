@@ -18,3 +18,14 @@ def CrearCuenta(request):
 
 def Articulos(request):
 	return render(request, 'Articulos.html')
+def Escribir(request):
+    if request.method == 'POST':
+        articulo = Articulo(titulo=request.POST['titulo'], subtitulo=request.POST['subtitulo'], contenido=request.POST['articulo'])
+        articulo.save()
+    return render(request,'Escribir.html')
+
+def Ser_Escritor(request):
+      if request.method == 'POST':
+        usuario = Autor(nombre=request.POST['nombre'], apellido=request.POST['apellido'], usuario=request.POST['usuario'], contraseña=request.POST['contraseña'], profesion=request.POST['profesion'])
+        usuario.save()
+      return render(request, "Ser_Escritor.html")
