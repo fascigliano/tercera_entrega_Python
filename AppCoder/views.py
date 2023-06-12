@@ -25,7 +25,11 @@ def Escribir(request):
     return render(request,'Escribir.html')
 
 def Ser_Escritor(request):
-      if request.method == 'POST':
+    if request.method == 'POST':
         usuario = Autor(nombre=request.POST['nombre'], apellido=request.POST['apellido'], usuario=request.POST['usuario'], contraseña=request.POST['contraseña'], profesion=request.POST['profesion'])
         usuario.save()
-      return render(request, "Ser_Escritor.html")
+    return render(request, "Ser_Escritor.html")
+
+def Buscar_Articulos(request):
+    return render(request,"BuscarArticulos.html")
+

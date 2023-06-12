@@ -27,4 +27,5 @@ path('Crear_Cuenta/', views.CrearCuenta, name="Crear_Cuenta"),
 path('Articulos/', views.Articulos, name="Articulos"),
 path('Escribir/', views.Escribir, name="Escribir"),
 path('Ser_Escritor/', views.Ser_Escritor, name="Ser_Escritor"),
+path('Buscar_Articulos/', views.Buscar_Articulos, name="Buscar_Articulos")
 ]
